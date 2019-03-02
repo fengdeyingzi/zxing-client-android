@@ -134,7 +134,7 @@ public final class CameraConfigurationUtils {
     }
 
     public static void setBestPreviewFPS(Camera.Parameters parameters, int minFPS, int maxFPS) {
-        List<int[]> supportedPreviewFpsRanges = parameters.getSupportedPreviewFpsRange();
+        List<int[]> supportedPreviewFpsRanges = (List<int[]>) parameters.getSupportedPreviewFpsRange();
         Log.i(TAG, "Supported FPS ranges: " + toString(supportedPreviewFpsRanges));
         if (supportedPreviewFpsRanges != null && !supportedPreviewFpsRanges.isEmpty()) {
             int[] suitableFPSRange = null;

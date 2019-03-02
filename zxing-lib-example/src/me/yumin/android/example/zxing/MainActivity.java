@@ -67,6 +67,19 @@ public class MainActivity extends Activity {
                 callCapture("UTF-8");
             }
         });
+				Button btn_start=(Button)findViewById(R.id.start);
+				btn_start.setOnClickListener(new Button.OnClickListener()
+					{
+
+						@Override
+						public void onClick(View p1)
+							{
+								Intent intent =new Intent(MainActivity.this,CreateCodeActivity.class);
+								startActivity(intent);
+							}
+						
+					
+				});
     }
 
     private void callCapture(String characterSet) {
